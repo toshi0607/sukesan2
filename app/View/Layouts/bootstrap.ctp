@@ -59,7 +59,7 @@
 			</div>
 		</div>
 	</div>
-
+ 
 	<div class="container">
 
 		<h1>Bootstrap starter template</h1>
