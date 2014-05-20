@@ -17,23 +17,25 @@
 <body>
 
 	<h1>
-		<p><img src="logo.png"></p>
+<?PHP echo $this->Html->image('logo.png', array('width'=>'250')); ?>
 	</h1>
-		飲み会予約、もう困らない！
 
+	<p>
+		飲み会予約、もう困らない！
+	</p><br>
 
 	<form id="condition" action="cgi-bin/abc.cgi" method="post">
-		<p><label>メールアドレス：<input type="email" name="data[Condition][mail]" size="30" maxlength="40" required></label></p>
+		<p><label>メールアドレス：<br><input type="email" name="data[Condition][mail]" size="30" maxlength="40" required></label></p>
 
 
-	<p><label>場所：<input type="text" name="data[Condition][location]" placeholder="例：東京駅" required></label></p>
+	<p><label>場所：<br><input type="text" name="data[Condition][location]" placeholder="例：東京駅" required></label></p>
 
 <p>
-	<label>条件：</label><br>
+	<label>条件：</label>
 		<textarea id="condition" name="data[Condition][additional]" cols="40" rows="4" maxlength="20" placeholder="例：個室5人　中華　5000円以内　駅近　日本酒　飲み放題" require></textarea>
 </p>
 
-	<p><input type="submit" value="Go!!!!!!"></p>
+	<p><button class="btn btn-primary" type="submit" value="submit">検索！</button></p>
 
 
 	</form>
