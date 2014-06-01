@@ -21,7 +21,9 @@
 	</h1>
 
 	<p>
-		飲み会予約、もう困らない！
+		「助三」は、飲み会のお店候補をスピーディーに探すことができるツールです。<br>
+		飲み会の条件を選択、入力して頂ければ、条件に合ったお店候補を3つご提案致します。<br>
+		意外に時間がかかってしまうお店選びのサポートにぜひご利用ください。<br>
 	</p><br>
 
 	<form id="condition" action="cgi-bin/abc.cgi" method="post">
@@ -71,10 +73,9 @@
 		<label>食べログの点数：</label>
 			<select type="int" name="data[Condition][review]">
 				<option value="0">指定しない</option>
-				<option value="2.9">〜2.9</option>
+				<option value="2.9">〜3.0</option>
 				<option value="3.4">3.0〜3.4</option>
-				<option value="3.9">3.5〜3.9</option>
-				<option value="5">4.0〜</option>
+				<option value="3.9">3.4〜</option>
 			</select>
 	</p>
 
