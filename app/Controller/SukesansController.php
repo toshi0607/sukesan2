@@ -1,29 +1,24 @@
 <?php
 
-class SukesansController extends AppController
-{
+class SukesansController extends AppController{
 
-    public $uses = array('Condition');
+    public $uses = array('Condition', 'Shop');
 
     // Sessionコンポーネントを使用する
     public $components = array('Session');
 
-    function register()
-    {
+    function register(){
     }
 
-    function confirm()
-    {
-        $this->request->data["Condition"]["user_id"]=1;
-        $this->Session->write('hozon',$this->request->data);
+    function confirm(){
+        //$this->request->data["Condition"]["user_id"]=1;　これって何用…？
+        $this->Session->write('session',$this->request->data);
     }
 
-    function complete()
-    {
-        $kategori = $this->Session->read('hozon');
-        $this->Condition->save($kategori);
-        $this->redirect('/sukesans/register');        
+    function search(){
+        $condition = $this->Session->read('session');
+        $this->Condition->save($condition);
+        $tmp = $this->Shop->findAllByLocation[$condition];
+        $this->set('result', $tmp);       
     }
-
-
 }  

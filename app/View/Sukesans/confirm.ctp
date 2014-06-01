@@ -19,6 +19,6 @@
 
 	</table>
 	
-<form  action="./complete" method="post" >
+<form  action="./search" method="post" >
  		<input type="submit" value="送信" >
 </form>
