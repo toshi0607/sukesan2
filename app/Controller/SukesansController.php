@@ -16,9 +16,14 @@ class SukesansController extends AppController{
     }
 
     function search(){
+
         $condition = $this->Session->read('session');
         $this->Condition->save($condition);
-        $tmp = $this->Shop->findAllByLocation[$condition];
-        $this->set('result', $tmp);       
+        $location = $condition['Condition']['location'];
+        $this->set('test', $location); 
+        $params = $this->Shop->find('all', array(
+            'conditions' => array('Shop.location' => $location)
+            ));
+        $this->set('result', $params);
     }
-}  
+}

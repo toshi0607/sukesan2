@@ -20,9 +20,10 @@
     	</tr>
     </table>
 
-<?php  echo h($result[0]['Shop']['name']);?>
+<!--<?php echo print_r($test); ?>-->
+<?php echo $test; ?>
 
-<?php for ($i = 0; $i < $result; $i++) { ?>
+<?php for ($i = 0; $i < count($result); $i++) { ?>
 
 	<tr>
     	<td><?php echo h($result[$i]['Shop']['name']); ?></td>
