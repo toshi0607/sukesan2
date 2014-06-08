@@ -18,24 +18,24 @@
 			<th>場所</th>
 			<th>特徴</th>
     	</tr>
-    </table>
 
 <!--<?php echo print_r($test); ?>-->
-<?php echo $test; ?>
+<!--<?php echo $test; ?>-->
 
-<?php for ($i = 0; $i < count($result); $i++) { ?>
+<?php for ($i = 0; $i < 3; $i++) { ?>
 
 	<tr>
     	<td><?php echo h($result[$i]['Shop']['name']); ?></td>
     	<td><?php echo h($result[$i]['Shop']['genre']); ?></td>
     	<td><?php echo h($result[$i]['Shop']['budget']); ?></td>
     	<td><?php echo h($result[$i]['Shop']['review']); ?></td>
-    	<td><?php echo h($mresul[$i]['Shop']['url']); ?></td>
+    	<td><?php echo h($result[$i]['Shop']['url']); ?></td>
      	<td><?php echo h($result[$i]['Shop']['location']); ?></td>
      	<td><?php echo h($result[$i]['Shop']['property']); ?></td>
     </tr>
 <?php } ?>
 
+	</table>
 
 <form method="post" 
 	action="<?php echo $this->Html->url("./register"); ?>">
