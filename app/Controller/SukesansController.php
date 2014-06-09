@@ -20,7 +20,7 @@ class SukesansController extends AppController{
         $this->Condition->save($condition);//検索条件を検索条件DBに保存
         $location = $condition['Condition']['location'];
         $params = $this->Shop->find('all', array(//検索条件から店舗情報DBを検索
-            'conditions' => array('Shop.location' => $location),
+            'conditions' => array('Shop.location LIKE' => '%'.$location.'%'),
             'order' => array('Shop.review DESC')//食べログ評価の大きい順に並び替え
             )
         );
