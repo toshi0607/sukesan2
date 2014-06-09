@@ -8,12 +8,18 @@
     	<tr>
         	<th>メールアドレス</th>
         	<th>場所</th>
+        	<th>人数</th>
+        	<th>コース予算</th>
+        	<th>食べログの点数</th>
         	<th>条件</th>
     	</tr>
 
     	<tr>
     		<td><?php echo h($this->request->data["Condition"]["mail"]);?></td>
 			<td><?php echo h($this->request->data["Condition"]["location"]);?></td>
+			<td>5人</td>
+			<td>¥3,000〜¥3,999</td>
+			<td>3.0〜3.4点</td>
 			<td><?php echo h($this->request->data["Condition"]["additional"]);?></td>
 		</tr>
 	</table>
