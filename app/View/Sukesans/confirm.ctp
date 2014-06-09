@@ -1,3 +1,5 @@
+<div  align="center">
+
 <p>
 	<h3>以下の内容で宜しいでしょうか？</h3>
 </p>
@@ -20,3 +22,5 @@
 <form  action="./search" method="post" >
  		<input type="submit" class="btn btn-primary" value="検索" >
 </form>
+
+</div>

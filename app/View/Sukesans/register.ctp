@@ -1,7 +1,8 @@
 
 <form method="post"
       action="<?php echo $this->Html->url("/sukesans/confirm"); ?>"
-      enctype="multipart/form-data">
+      enctype="multipart/form-data"
+      align='center'>
 
 <!DOCTYPE html>
 <html>

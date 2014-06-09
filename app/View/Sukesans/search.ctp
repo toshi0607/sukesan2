@@ -6,9 +6,10 @@
 
 <body>
 
+<div  align="center">
 	<p>サービスのご利用りがとうございました。以下の3店舗をご案内いたします。</p>
 
-	<table class="table table-striped">
+	<table class="table table-striped"  align="center">
 		<tr>
 			<th>お店</th>
 			<th>料理ジャンル</th>
@@ -42,5 +43,6 @@
 	<input name="check" type="submit" class="btn" value="検索画面に戻る" /></form>
 </form>
 
+</div>
 </body>
 </html>
