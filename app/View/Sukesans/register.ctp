@@ -11,7 +11,7 @@
 <body>
 
 	<h1>
-<?PHP echo $this->Html->image('logo.png', array('width'=>'250')); ?>
+<?PHP echo $this->Html->image('logo.png', array('width'=>'150')); ?>
 	</h1>
 
 	<p>
