@@ -16,14 +16,15 @@ class SukesansController extends AppController{
     }
 
     function search(){
-
         $condition = $this->Session->read('session');
-        $this->Condition->save($condition);
+        $this->Condition->save($condition);//検索条件を検索条件DBに保存
         $location = $condition['Condition']['location'];
-        $this->set('test', $location); 
-        $params = $this->Shop->find('all', array(
-            'conditions' => array('Shop.location' => $location)
-            ));
+        $params = $this->Shop->find('all', array(//検索条件から店舗情報DBを検索
+            'conditions' => array('Shop.location' => $location),
+            'order' => array('Shop.review DESC')//食べログ評価の大きい順に並び替え
+            )
+        );
+
         $this->set('result', $params);
     }
 }

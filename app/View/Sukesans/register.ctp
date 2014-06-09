@@ -35,7 +35,7 @@
 
 	<p>
 		<label>人数：</label>
-			<select type="id" name="data[Condition][number]" >
+			<select type="id" name="data[Condition][number]">
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -79,7 +79,7 @@
 			※条件をスペースで区切ってください
 	</p>
 
-	<br><p><button class="btn btn-primary" type="submit" value="submit">検索！</button></p>
+	<br><p><button class="btn btn-primary" type="submit" value="submit">検索</button></p>
 
 	</form>
 
