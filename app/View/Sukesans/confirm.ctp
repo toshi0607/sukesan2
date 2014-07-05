@@ -18,7 +18,7 @@
     		<td><?php echo h($this->request->data["Condition"]["mail"]);?></td>
 			<td><?php echo h($this->request->data["Condition"]["location"]);?></td>
 			<td>5人</td>
-			<td>¥3,000〜¥3,999</td>
+			<td>指定しない</td>
 			<td>3.0〜3.4点</td>
 			<td><?php echo h($this->request->data["Condition"]["additional"]);?></td>
 		</tr>
