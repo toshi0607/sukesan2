@@ -12,10 +12,11 @@ class SukesansController extends AppController{
 
     function confirm(){
         //$this->request->data["Condition"]["user_id"]=1;　これって何用…？
-        $this->Session->write('session',$this->request->data);
+
     }
 
     function search(){
+        $this->Session->write('session',$this->request->data);
         $condition = $this->Session->read('session');
         $this->Condition->save($condition);//検索条件を検索条件DBに保存
         $location = $condition['Condition']['location'];

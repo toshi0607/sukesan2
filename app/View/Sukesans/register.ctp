@@ -1,6 +1,6 @@
 
 <form method="post"
-      action="<?php echo $this->Html->url("/sukesans/confirm"); ?>"
+      action="<?php echo $this->Html->url("/sukesans/search"); ?>"
       enctype="multipart/form-data"
       align='center'>
 
@@ -41,7 +41,6 @@
 				<option value="2">2</option>
 				<option value="3">3</option>
 				<option value="4">4</option>
-				<option value="5">5</option>
 				<option value="5">5</option>
 				<option value="6">6</option>
 				<option value="7">7</option>
