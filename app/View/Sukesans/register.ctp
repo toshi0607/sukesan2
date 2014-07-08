@@ -1,6 +1,6 @@
 
 <form method="post"
-      action="<?php echo $this->Html->url("/sukesans/search"); ?>"
+      action="<?= $this->Html->url("/sukesans/search"); ?>"
       enctype="multipart/form-data"
       align='center'>
 
@@ -12,7 +12,7 @@
 <body>
 
 	<h1>
-<?PHP echo $this->Html->image('logo.png', array('width'=>'150')); ?>
+<?= $this->Html->image('logo.png', array('width'=>'150')); ?>
 	</h1>
 
 	<p>
@@ -21,7 +21,8 @@
 		意外に時間がかかってしまうお店選びのサポートにぜひご利用ください。<br>
 	</p><br>
 
-	<form id="condition" action="cgi-bin/abc.cgi" method="post">
+	<form action="cgi-bin/abc.cgi" method="post">
+	<!--	
 		<p>
 			<label>メールアドレス：</label>
 			<div class="input-prepend">
@@ -31,53 +32,79 @@
 				<input type="email" name="data[Condition][mail]" size="30" maxlength="40" required>
 			</div>
 		</p>
+	-->
 
-	<p><label>場所：<br><input type="text" name="data[Condition][location]" placeholder="例：東京駅" required></label></p>
+	<p><label>最寄り駅：<br>
+		<select type="text" name="data[Condition][location]"  required></label>
+				<option value="渋谷" selected="selected">渋谷</option>
+				<option value="新橋">新橋</option>
+		</select>
+		駅
+	</p>
 
 	<p>
-		<label>人数：</label>
-			<select type="id" name="data[Condition][number]">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-				<option value="9">9</option>
-				<option value="10">10</option>
-				<option value="11">11人以上</option>
+		<label>予算：</label>
+			<select type="int" name="data[Condition][budget_min]">
+				<option value="0" selected="selected">指定しない</option>
+				<option value="1000">¥1,000</option>
+				<option value="2000">¥2,000</option>
+				<option value="3000">¥3,000</option>
+				<option value="4000">¥4,000</option>
+				<option value="5000">¥5,000</option>
+				<option value="6000">¥6,000</option>
+				<option value="8000">¥8,000</option>
+				<option value="10000">¥10,000</option>
+				<option value="15000">¥15,000</option>
+				<option value="20000">¥20,000</option>
+			</select>
+				〜
+			<select type="int" name="data[Condition][budget_max]">
+				<option value="0" selected="selected">指定しない</option>
+				<option value="1000">¥1,000</option>
+				<option value="2000">¥2,000</option>
+				<option value="3000">¥3,000</option>
+				<option value="4000">¥4,000</option>
+				<option value="5000">¥5,000</option>
+				<option value="6000">¥6,000</option>
+				<option value="8000">¥8,000</option>
+				<option value="10000">¥10,000</option>
+				<option value="15000">¥15,000</option>
+				<option value="20000">¥20,000</option>
+			</select>
+	</p>
+
+
+	<p><label>利用シーン：<br>
+		<select type="text" name="data[Condition][purpose]"  required></label>
+				<option value="仮" selected="selected">仮</option>
+				<option value="仮" >指定しない</option>
+				<option value="接待">接待</option>
+				<option value="外国人接待">外国人接待</option>
+				<option value="社内飲み">社内飲み</option>
+				<option value="のんべえ向け">のんべえ向け</option>
 		</select>
 	</p>
 
+<!--
 	<p>
-		<label>コース予算：</label>
-			<select type="int" name="data[Condition][budget]">
-				<option value="0">指定しない</option>
-				<option value="1">〜¥2,999</option>
-				<option value="2">¥3,000〜¥3,999</option>
-				<option value="3">¥4,000〜¥4,999</option>
-				<option value="4">¥5,000〜¥5,999</option>
-				<option value="5">¥6,000〜</option>
+		<label>利用シーン：</label>
+			<input type="checkbox" name="data[Condition][purpose]" value="接待">接待
+			<input type="checkbox" name="data[Condition][purpose]" value="外国人接待">外国人接待
+			<input type="checkbox" name="data[Condition][purpose]" value="社内飲み">社内飲み
+			<input type="checkbox" name="data[Condition][purpose]" value="のんべえ向け">のんべえ向け
+	</p>
+-->
+<br>
+	<p>
+		<label>絞り込み：</label>
+			<select type="int" name="data[Condition][occupation]">
+				<option value="0" >指定しない</option>
+				<option value="商社" selected="selected">商社マンオススメ</option>
 			</select>
 	</p>
+	
 
-	<p>
-		<label>食べログの点数：</label>
-			<select type="int" name="data[Condition][review]">
-				<option value="0">指定しない</option>
-				<option value="2.9">〜3.0</option>
-				<option value="3.4">3.0〜3.4</option>
-				<option value="3.9">3.4〜</option>
-			</select>
-	</p>
 
-	<p>
-		<label>条件：</label>
-			<textarea id="condition" name="data[Condition][additional]" cols="40" rows="4" maxlength="20" placeholder="例：個室　中華　駅近　日本酒　飲み放題" require></textarea><br>
-			※条件をスペースで区切ってください
-	</p>
 
 	<br><p><button class="btn btn-primary" type="submit" value="submit">検索</button></p>
 
