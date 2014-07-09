@@ -25,7 +25,10 @@
 <!--<?php echo print_r($test); ?>-->
 <!--<?php echo $test; ?>-->
 
-<?php for($i = 0; $i < 3; $i++) { ?>
+
+<?php 
+	if(count($result) >= 3){//検索条件に該当する店舗が3店以上のとき。
+		for($i = 0; $i < 3; $i++) { ?>
 
 			<tr>
     			<td><?= h($result[$i]['Shop']['name']);?></td>
@@ -39,7 +42,7 @@
      			<td><?= h($result[$i]['Shop']['location']);?></td>
      			<td><?= h($result[$i]['Shop']['property']);?></td>
     		</tr>
-<?php } ?>
+    	<?php } ?>
 	</table>
 <br>
 
@@ -47,6 +50,38 @@
 	action="<?= $this->Html->url("./register"); ?>">
 	<input name="check" type="submit" class="btn" value="検索画面に戻る" /></form>
 </form>
+
+
+
+
+<?php } else {//検索条件に該当する店舗が3店未満のとき。
+		for($i = 0; $i < count($result); $i++) { ?>
+
+			<tr>
+    			<td><?= h($result[$i]['Shop']['name']);?></td>
+    			<td><?= h($result[$i]['Shop']['genre']);?></td>
+    			<td><?= h($result[$i]['Shop']['purpose']);?></td>
+    			<td><?= h($result[$i]['Shop']['recommendation']);?></td>
+    			<td><?= h($result[$i]['Shop']['budget_min']);?>〜<?= h($result[$i]['Shop']['budget_max']);?>円</td>
+    			<!--<td><?= h($result[$i]['Shop']['review']);?></td>-->
+    			<td><a href="<?= h($result[$i]['Shop']['url'])?>" target="_blank">
+    				<?= h($result[$i]['Shop']['url']);?></a></td>
+     			<td><?= h($result[$i]['Shop']['location']);?></td>
+     			<td><?= h($result[$i]['Shop']['property']);?></td>
+    		</tr>
+    	<?php } ?>
+	</table>
+<br>
+
+<form method="post" 
+	action="<?= $this->Html->url("./register"); ?>">
+	<input name="check" type="submit" class="btn" value="検索画面に戻る" /></form>
+</form>
+
+
+
+<?php } ?>
+
 
 <br><br>
 
