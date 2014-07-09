@@ -7,6 +7,8 @@ class SukesansController extends AppController{
     // Sessionコンポーネントを使用する
     public $components = array('Session');
 
+    //　Shopモデルと○○モデルの連携
+
     function register(){
     }
 
@@ -21,16 +23,22 @@ class SukesansController extends AppController{
         $this->Condition->save($condition);//検索条件を検索条件DBに保存
         
 
+        $min = $condition['Condition']['budget_min'];
+        $max = $condition['Condition']['budget_max'];
         $location = $condition['Condition']['location'];
         $occupation = $condition['Condition']['occupation'];
         $purpose = $condition['Condition']['purpose'];
 
         
-        $params = $this->Shop->find('all', array(//検索条件から店舗情報DBを検索
+        $params = $this->Shop->find('all', array(
+            //検索条件から店舗情報DBを検索
             'conditions' => array(
                 
                 //最寄り駅検索   
                 'Shop.location LIKE' => '%'.$location.'%',
+                //予算検索
+                'Shop.budget_min >=' => $min,
+                'Shop.budget_max <=' => $max,
                 //利用シーン検索
                 'Shop.purpose' => $purpose,
                 //絞り込み検索
@@ -38,6 +46,7 @@ class SukesansController extends AppController{
 
 
             ),
+            
             'order' => array('Shop.review DESC')//食べログ評価の大きい順に並び替え
             )
         );

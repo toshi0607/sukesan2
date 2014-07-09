@@ -59,7 +59,7 @@
 			</select>
 				〜
 			<select type="int" name="data[Condition][budget_max]">
-				<option value="0" selected="selected">指定しない</option>
+				<option value="100000" selected="selected">指定しない</option>
 				<option value="1000">¥1,000</option>
 				<option value="2000">¥2,000</option>
 				<option value="3000">¥3,000</option>
