@@ -7,7 +7,7 @@
 <body>
 
 <div  align="center">
-	<p>サービスのご利用ありがとうございました。以下の3店舗をご案内いたします。</p>
+	<p>サービスのご利用ありがとうございました。以下の店舗をご案内いたします。</p>
 
 	<table class="table table-striped"  align="center">
 		<tr>
@@ -58,6 +58,33 @@
 	<input name="check" type="submit" class="btn" value="別の条件で検索する" /></form>
 </form>
 
+<br><br>
+
+
+<p>
+<p>
+	<label>下記情報をコピーしてお使いください。</label>
+		<textarea style="width: 500px; height: 150px">
+
+<?php for($i = 0; $i < 3; $i++){?>
+(<?= $i+1 ;?>)
+お店：<?= h($result[$i]['Shop']['name']);?>
+
+ジャンル：<?= h($result[$i]['Shop']['genre']);?>
+
+お店情報：<?= h($result[$i]['Shop']['url']);?>
+
+場所：<?= h($result[$i]['Shop']['location']);?>
+
+特徴：<?= h($result[$i]['Shop']['property']);?>
+
+
+<?php } ?>
+		</textarea>
+</p>
+
+<br>
+
 
 
 
@@ -88,30 +115,19 @@
 	<input name="check" type="submit" class="btn" value="条件を変えてもう一度検索する" /></form>
 </form>
 
-
-
-<?php } ?>
-
-
-<br><br>
-
-
 <p>
 <p>
 	<label>下記情報をコピーしてお使いください。</label>
 		<textarea style="width: 500px; height: 150px">
 
-<?php for($i = 0; $i < 3; $i++){?>
+<?php for($i = 0; $i < count($result); $i++){?>
 (<?= $i+1 ;?>)
 お店：<?= h($result[$i]['Shop']['name']);?>
 
 ジャンル：<?= h($result[$i]['Shop']['genre']);?>
 
-予算：<?= h($result[$i]['Shop']['budget_min']);?>〜<?= h($result[$i]['Shop']['budget_max']);?>円
-
 お店情報：<?= h($result[$i]['Shop']['url']);?>
 
-食べログ評価：<?= h($result[$i]['Shop']['review']);?>点
 場所：<?= h($result[$i]['Shop']['location']);?>
 
 特徴：<?= h($result[$i]['Shop']['property']);?>
@@ -122,6 +138,11 @@
 </p>
 
 <br>
+
+<?php } ?>
+
+
+
 
 <p>
 	操作手順<br>

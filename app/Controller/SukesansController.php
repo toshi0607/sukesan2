@@ -43,7 +43,7 @@ class SukesansController extends AppController{
                 'Shop.budget_min >=' => $min,
                 'Shop.budget_max <=' => $max,
                 //利用シーン検索
-                'Shop.purpose' => $purpose,
+                'Shop.purpose LIKE' => '%'.$purpose.'%',
                 //絞り込み検索
                 'Shop.occupation' => $occupation
 
