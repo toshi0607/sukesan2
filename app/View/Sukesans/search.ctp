@@ -27,7 +27,7 @@
 
 
 <?php 
-	if(count($result) >= 3){//検索条件に該当する店舗が3店以上のとき。
+	if(count($result) > 3){//検索条件に該当する店舗が3店以上のとき。
 		for($i = 0; $i < 3; $i++) { ?>
 
 			<tr>
@@ -46,9 +46,16 @@
 	</table>
 <br>
 
+
+<!--同じ条件で他の店舗を表示させる-->
+<!--
+<form method="post" 
+	action="<?= $this->Html->url("./search"); ?>">
+	<input name="check" type="submit" class="btn" value="同じ条件の別店舗を探す" /></form>
+-->
 <form method="post" 
 	action="<?= $this->Html->url("./register"); ?>">
-	<input name="check" type="submit" class="btn" value="検索画面に戻る" /></form>
+	<input name="check" type="submit" class="btn" value="別の条件で検索する" /></form>
 </form>
 
 
@@ -73,9 +80,12 @@
 	</table>
 <br>
 
+<!--条件をゆるくしてもう一度検索させる-->
+
+
 <form method="post" 
 	action="<?= $this->Html->url("./register"); ?>">
-	<input name="check" type="submit" class="btn" value="検索画面に戻る" /></form>
+	<input name="check" type="submit" class="btn" value="条件を変えてもう一度検索する" /></form>
 </form>
 
 
