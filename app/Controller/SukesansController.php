@@ -9,6 +9,9 @@ class SukesansController extends AppController{
 
     //　Shopモデルと○○モデルの連携
 
+
+
+
     function register(){
     }
 
@@ -47,9 +50,10 @@ class SukesansController extends AppController{
 
             ),
             
-            'order' => array('Shop.review DESC')//食べログ評価の大きい順に並び替え
+            'order' => array('rand()')//検査条件に該当する店舗の配列の順序を入れ替える
             )
         );
+
 
         $this->set('result', $params);
     }

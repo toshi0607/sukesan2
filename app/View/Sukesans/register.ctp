@@ -38,6 +38,7 @@
 		<select type="text" name="data[Condition][location]"  required></label>
 				<option value="渋谷" selected="selected">渋谷</option>
 				<option value="新橋">新橋</option>
+				<option value="外苑前">外苑前</option>
 		</select>
 		駅
 	</p>
@@ -76,9 +77,8 @@
 
 	<p><label>利用シーン：<br>
 		<select type="text" name="data[Condition][purpose]"  required></label>
-				<option value="仮" selected="selected">仮</option>
 				<option value="仮" >指定しない</option>
-				<option value="接待">接待</option>
+				<option value="接待" selected="selected">接待</option>
 				<option value="外国人接待">外国人接待</option>
 				<option value="社内飲み">社内飲み</option>
 				<option value="のんべえ向け">のんべえ向け</option>
@@ -98,7 +98,7 @@
 	<p>
 		<label>絞り込み：</label>
 			<select type="int" name="data[Condition][occupation]">
-				<option value="0" >指定しない</option>
+<!--				<option value="0" >指定しない</option> -->
 				<option value="商社" selected="selected">商社マンオススメ</option>
 			</select>
 	</p>
