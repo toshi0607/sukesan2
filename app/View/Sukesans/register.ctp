@@ -37,7 +37,7 @@
 	<p><label>最寄り駅：<br>
 		<select type="text" name="data[Condition][location]"  required></label>
 				<option value="渋谷" selected="selected">渋谷</option>
-				<option value="新橋">新橋</option>
+				<option value="新宿">新宿</option>
 				<option value="外苑前">外苑前</option>
 		</select>
 		駅
@@ -81,7 +81,8 @@
 				<option value="接待" selected="selected">接待</option>
 				<option value="外国人接待">外国人接待</option>
 				<option value="社内飲み">社内飲み</option>
-				<option value="のんべえ向け">のんべえ向け</option>
+				<option value="デート">デート</option>
+				<!--<option value="のんべえ向け">のんべえ向け</option>-->
 		</select>
 	</p>
 
