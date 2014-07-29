@@ -59,7 +59,7 @@
 -->
 	<form method="post" 
 		action="<?= $this->Html->url("./register"); ?>">
-		<input name="check" type="submit" class="btn" value="別の条件で検索する" /></form>
+		<input name="check" type="submit" class="btn btn-primary" value="別の条件で検索する" /></form>
 	</form>
 
 	<br><br>
@@ -115,7 +115,7 @@
 
 	<form method="post" 
 		action="<?= $this->Html->url("./register"); ?>">
-		<input name="check" type="submit" class="btn" value="条件を変えてもう一度検索する" /></form>
+		<input name="check" type="submit" class="btn btn-primary" value="条件を変えてもう一度検索する" /></form>
 	</form>
 
 
@@ -171,13 +171,19 @@
 
 	<form method="post" 
 		action="<?= $this->Html->url("./register"); ?>">
-		<input name="check" type="submit" class="btn" value="条件を変えてもう一度検索する" /></form>
+		<input name="check" type="submit" class="btn btn-primary" value="条件を変えてもう一度検索する" /></form>
 	</form>
 
 	</div>
 
 	<?php } ?>
 
+
+<div  align="center">
+	<a href="https://twitter.com/share" class="twitter-share-button" data-url="飲み会幹事向けサービス「助三」を使ってみる！　 http://toshi0607.sakura.ne.jp/sukesan/sukesans/register" data-via="toshi0607" data-lang="ja">ツイート</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+</div>
 
 </body>
 </html>
