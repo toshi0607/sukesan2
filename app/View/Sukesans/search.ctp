@@ -68,6 +68,9 @@
 	<input name="check" type="submit" class="btn" value="同じ条件の別店舗を探す" /></form>
 -->
 	<form method="post" 
+		action="<?= $this->Html->url("https://questant.jp/q/NP31YSA3"); ?>">
+		<input name="check" type="submit" class="btn btn-danger" value="助三を育てるアンケートに回答する" /></form>
+	<form method="post" 
 		action="<?= $this->Html->url("./register"); ?>">
 		<input name="check" type="submit" class="btn btn-primary" value="別の条件で検索する" /></form>
 	</form>
@@ -122,7 +125,9 @@
 
 <!--条件をゆるくしてもう一度検索させる-->
 
-
+	<form method="post" 
+		action="<?= $this->Html->url("https://questant.jp/q/NP31YSA3"); ?>">
+		<input name="check" type="submit" class="btn btn-danger" value="助三を育てるアンケートに回答する" /></form>
 	<form method="post" 
 		action="<?= $this->Html->url("./register"); ?>">
 		<input name="check" type="submit" class="btn btn-primary" value="条件を変えてもう一度検索する" /></form>
@@ -178,7 +183,9 @@
 			</p>
 
 <br><br>
-
+	<form method="post" 
+		action="<?= $this->Html->url("https://questant.jp/q/NP31YSA3"); ?>">
+		<input name="check" type="submit" class="btn btn-danger" value="助三を育てるアンケートに回答する" /></form>
 	<form method="post" 
 		action="<?= $this->Html->url("./register"); ?>">
 		<input name="check" type="submit" class="btn btn-primary" value="条件を変えてもう一度検索する" /></form>
