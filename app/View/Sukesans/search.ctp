@@ -209,8 +209,13 @@
 
 	<div class="fb-like" data-href="http://toshi0607.sakura.ne.jp/sukesan/sukesans/register" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
 
+<br><br>
 
 </div>
-
+	<footer>
+		<div  align="center">
+			<p>Copyright &copy;  2014 助三 All Rights Reserved.</p>
+		</div>
+	</footer>
 </body>
 </html>

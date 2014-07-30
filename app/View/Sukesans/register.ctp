@@ -125,7 +125,7 @@
 	<span>
 		<script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script>
 		<script type="text/javascript">
-			new media_line_me.LineButton({"pc":true,"lang":"ja","type":"a","text":"飲み会幹事向け検索サービス「助三」を使ってみる！","withUrl":true});
+			new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a","text":"飲み会幹事向け検索サービス「助三」を使ってみる！","withUrl":true});
 		</script>
 	</span>
 	<a href="https://twitter.com/share" class="twitter-share-button" data-text="飲み会幹事向け検索サービス「助三」を使ってみる！" data-via="sukesan2014" data-lang="ja">ツイート</a>
@@ -135,10 +135,16 @@
 
 </div>
 
-
-
-
+<br><br>
+	<footer>
+		<div  align="center">
+			<p>Copyright &copy;  2014 助三 All Rights Reserved.</p>
+		</div>
+	</footer>
 </body>
+
+
+
 
 </html>
 </form>
