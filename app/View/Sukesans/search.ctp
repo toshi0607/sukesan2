@@ -196,7 +196,7 @@
 	<?php } ?>
 
 
-<div  align="center">
+<div  align="center" style="float:center;">
 
 	<span>
 		<script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script>

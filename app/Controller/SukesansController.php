@@ -21,6 +21,7 @@ class SukesansController extends AppController{
     }
 
     function search(){
+
         $this->Session->write('session',$this->request->data);
         $condition = $this->Session->read('session');
         $this->Condition->save($condition);//検索条件を検索条件DBに保存
