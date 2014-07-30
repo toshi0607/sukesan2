@@ -51,6 +51,7 @@
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li class="active"><a href="./register">Home</a></li>
+						<li class="active"><a href="./news">News</a></li>
 						<!--<li><a href="#about">About</a></li>-->
 						<!--<li><a href="#contact">Contact</a></li>-->
 					</ul>

@@ -15,12 +15,11 @@ class SukesansController extends AppController{
     function register(){
     }
 
-    function confirm(){
-        //$this->request->data["Condition"]["user_id"]=1;　これって何用…？
-
+    function news(){
     }
 
     function search(){
+
 
         $this->Session->write('session',$this->request->data);
         $condition = $this->Session->read('session');
