@@ -48,8 +48,8 @@
 	　　　　　　　　　助三を育てるためのアンケート追加<br>
 	　　　　　　　　　コピーライト追記<br>
 	　　　　　　　　　ページタイトル修正<br>
-　　　　　　　　　Newsページ追加	
-	</li>
+　　　　　　　　　Newsページ追加	</li>
+	<li>2014年8月１日　アンケートリンク修正</li>
 
 
 </div>
@@ -57,6 +57,7 @@
 <br><br>
 <div>
 	<input type="button" onclick="window.open('https://questant.jp/q/NP31YSA3')" target="_blank" value="助三を育てるアンケートに回答する" class="btn btn-danger"><br>
+	※表示されにくい場合は再読み込みをお願いいたします。<br><br>
 </div>
 
 

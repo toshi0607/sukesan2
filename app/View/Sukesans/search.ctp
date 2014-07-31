@@ -70,6 +70,7 @@
 
 
 	<input type="button" onclick="window.open('https://questant.jp/q/NP31YSA3')" target="_blank" value="助三を育てるアンケートに回答する" class="btn btn-danger"><br>
+	※表示されにくい場合は再読み込みをお願いいたします。<br><br>
 	
 	<form method="post" 
 		action="<?= $this->Html->url("./register"); ?>">
