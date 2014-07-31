@@ -40,7 +40,8 @@
 	<li>2014年7月5日　  検索条件確認画面削除</li>
 	<li>2014年7月9日　  検索条件変更（利用シーン、絞り込み）</li>
 	<li>2014年7月10日　検索結果の数に応じて再検索ボタンを変更</li>
-	<li>2014年7月27日　こっそりリリース</li>
+	<li>2014年7月27日　新宿、渋谷、外苑前の店舗対応<br>
+	　　　　　　　　　こっそりリリース</li>
 	<li>2014年7月30日　ツイッター、いいね！ボタン設置<br>
 	　　　　　　　　　検索結果が0のとき謝る</li>
 	<li>2014年7月31日　LINEボタン（モバイル）追加<br>
@@ -55,10 +56,7 @@
 
 <br><br>
 <div>
-	<form method="post" 
-		action="<?= $this->Html->url("https://questant.jp/q/NP31YSA3"); ?>">
-		<input name="check" type="submit" class="btn btn-danger" value="助三を育てるアンケートに回答する" />
-	</form>
+	<input type="button" onclick="window.open('https://questant.jp/q/NP31YSA3')" target="_blank" value="助三を育てるアンケートに回答する" class="btn btn-danger"><br>
 </div>
 
 

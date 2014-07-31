@@ -67,12 +67,13 @@
 	action="<?= $this->Html->url("./search"); ?>">
 	<input name="check" type="submit" class="btn" value="同じ条件の別店舗を探す" /></form>
 -->
-	<form method="post" 
-		action="<?= $this->Html->url("https://questant.jp/q/NP31YSA3"); ?>">
-		<input name="check" type="submit" class="btn btn-danger" value="助三を育てるアンケートに回答する" /></form>
+
+
+	<input type="button" onclick="window.open('https://questant.jp/q/NP31YSA3')" target="_blank" value="助三を育てるアンケートに回答する" class="btn btn-danger"><br>
+	
 	<form method="post" 
 		action="<?= $this->Html->url("./register"); ?>">
-		<input name="check" type="submit" class="btn btn-primary" value="別の条件で検索する" /></form>
+		<input name="check" type="submit" class="btn btn-primary" value="別の条件で検索する" target="_blank"></form>
 	</form>
 
 	<br><br>
