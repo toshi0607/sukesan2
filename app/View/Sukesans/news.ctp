@@ -17,7 +17,7 @@
 
 <div  align='center'>
 	<h1>
-		<?= $this->Html->image('logo.png', array('width'=>'150')); ?>
+		<?= $this->Html->image('logo.png', array('width'=>'300')); ?>
 	</h1>
 
 	<p>
@@ -49,7 +49,10 @@
 	　　　　　　　　　コピーライト追記<br>
 	　　　　　　　　　ページタイトル修正<br>
 　　　　　　　　　Newsページ追加	</li>
-	<li>2014年8月１日　アンケートリンク修正</li>
+	<li>2014年8月１日　アンケートリンク修正<br>
+	　　　　　　　　　ロゴの変更<br>
+	　　　　　　　　　リリース</li>
+
 
 
 </div>

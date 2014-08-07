@@ -22,13 +22,13 @@
 
 
 	<h1>
-<?= $this->Html->image('logo.png', array('width'=>'150')); ?>
+<?= $this->Html->image('logo.png', array('width'=>'300')); ?>
 	</h1>
 
 	<p>
-		「助三」は、飲み会のお店候補をスピーディーに探すことができるツールです。<br>
-		飲み会の条件を選択、入力して頂ければ、条件に合ったお店候補を3つご提案致します。<br>
-		意外に時間がかかってしまうお店選びのサポートにぜひご利用ください。<br>
+		「助三」は、飲み会会場をスピーディーに探すことができるサービスです。<br>
+		<!--飲み会の条件を選択、入力して頂ければ、条件に合ったお店候補を3つご提案致します。<br>
+		意外に時間がかかってしまうお店選びのサポートにぜひご利用ください。<br>-->
 	</p><br>
 
 	<form action="cgi-bin/abc.cgi" method="post">
@@ -87,7 +87,7 @@
 
 	<p><label>利用シーン：<br>
 		<select type="text" name="data[Condition][purpose]"  required></label>
-				<option value="仮" >指定しない</option>
+				<!--<option value="仮" >指定しない</option>-->
 				<option value="接待" selected="selected">接待</option>
 				<option value="外国人接待">外国人接待</option>
 				<option value="社内飲み">社内飲み</option>
