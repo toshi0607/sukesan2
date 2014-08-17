@@ -10,8 +10,6 @@ class SukesansController extends AppController{
     //　Shopモデルと○○モデルの連携
 
 
-
-
     function register(){
     }
 

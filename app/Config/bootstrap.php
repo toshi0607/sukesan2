@@ -95,6 +95,7 @@ Configure::write('Dispatcher.filters', array(
  * Configures default file logging options
  */
 App::uses('CakeLog', 'Log');
+App::uses( 'CakeEmail', 'Network/Email');
 CakeLog::config('debug', array(
 	'engine' => 'File',
 	'types' => array('notice', 'info', 'debug'),
@@ -109,3 +110,7 @@ CakeLog::config('error', array(
 CakePlugin::load(array('TwitterBootstrap'));
 
 CakePlugin::load('DebugKit');
+
+CakePlugin::load('Xform');
+CakePlugin::load('Cakeplus');
+

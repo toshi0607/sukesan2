@@ -138,8 +138,7 @@
 
 	<p>
 		<label>下記情報をコピーしてお使いください。</label>
-			<textarea style="width: 500px; height: 150px">
-
+			<textarea onmouseover="this.select()" style="width: 500px; align: left: height: 150px" >
 	<?php for($i = 0; $i < count($result); $i++){?>
 	(<?= $i+1 ;?>)
 	お店：<?= h($result[$i]['Shop']['name']);?>
