@@ -27,9 +27,7 @@ class SukesansController extends AppController{
         $min = $condition['Condition']['budget_min'];
         $max = $condition['Condition']['budget_max'];
         $location = $condition['Condition']['location'];
-        $occupation = $condition['Condition']['occupation'];
-        $purpose = $condition['Condition']['purpose'];
-
+        $search = $condition['Condition']['search'];
         
         $params = $this->Shop->find('all', array(
             //検索条件から店舗情報DBを検索
@@ -40,15 +38,14 @@ class SukesansController extends AppController{
                 //予算検索
                 'Shop.budget_min >=' => $min,
                 'Shop.budget_max <=' => $max,
-                //利用シーン検索
-                'Shop.purpose LIKE' => '%'.$purpose.'%',
                 //絞り込み検索
-                'Shop.occupation' => $occupation
+                'Shop.search LIKE' => '%'.$search.'%',
+
 
 
             ),
             
-            'order' => array('rand()')//検査条件に該当する店舗の配列の順序を入れ替える
+            'order' => array('rand()')//検索条件に該当する店舗の配列の順序を入れ替える
             )
         );
 
