@@ -24,18 +24,7 @@
 		<div  align="center">
 			<p>サービスのご利用ありがとうございました。以下の店舗をご案内いたします。</p>
 
-			<table class="table table-striped"  align="center">
-				<tr>
-					<th>お店</th>
-					<th>料理ジャンル</th>
-					<th>オススメ用途</th>
-					<th>イチオシ料理・酒</th>
-					<th>予算</th>
-					<!--<th>食べログ評価</th>-->
-					<th>URL</th>
-					<th>場所</th>
-					<th>特徴</th>
-    			</tr>
+
 
 
 <!--<?php echo $shop; ?>-->
@@ -47,21 +36,45 @@
 		if(count($result) > 3){//検索条件に該当する店舗が3店以上のとき。
 			for($i = 0; $i < 3; $i++) { ?>
 
+		<p>その<?= $i+1;?></p>
+			<table class="table table-striped"  align="center">
+				
 				<tr>
-    				<td><?= h($result[$i]['Shop']['name']);?></td>
-    				<td><?= h($result[$i]['Shop']['genre']);?></td>
-    				<td><?= h($result[$i]['Shop']['purpose']);?></td>
-    				<td><?= h($result[$i]['Shop']['recommendation']);?></td>
-    				<td><?= h($result[$i]['Shop']['budget_min']);?>〜<?= h($result[$i]['Shop']['budget_max']);?>円</td>
-    				<td><a href="<?= h($result[$i]['Shop']['url'])?>" target="_blank">
-    					<?= h($result[$i]['Shop']['url']);?></a></td>
-     				<td><?= h($result[$i]['Shop']['location']);?>駅</td>
-     				<td><?= h($result[$i]['Shop']['property']);?></td>
+					<th>お店</th>
+					    <td display><?= h($result[$i]['Shop']['name']);?></td>
+				</tr>
+				<tr>
+					<th>料理ジャンル</th>
+						<td><?= h($result[$i]['Shop']['genre']);?></td>
+				</tr>
+				<tr>
+					<th>オススメ用途</th>
+					    <td><?= h($result[$i]['Shop']['purpose']);?></td>
+				</tr>
+				<tr>
+					<th>イチオシ料理・酒</th>
+						  <td><?= h($result[$i]['Shop']['recommendation']);?></td>
+				</tr>
+				<tr>
+					<th>予算</th>
+    					<td><?= h($result[$i]['Shop']['budget_min']);?>〜<?= h($result[$i]['Shop']['budget_max']);?>円</td>
     			</tr>
+    			<tr>
+					<th>URL</th>
+						<td width="20"><a href="<?= h($result[$i]['Shop']['url'])?>" target="_blank">
+    					<?= h($result[$i]['Shop']['url']);?></a></td>
+    			</tr>
+    			<tr>
+					<th>場所</th>
+						<td><?= h($result[$i]['Shop']['location']);?>駅</td>
+				</tr>
+				<tr>
+					<th>特徴</th>
+					     <td><?= h($result[$i]['Shop']['property']);?></td>
+    			</tr>
+			</table>
     	<?php } ?>
-		</table>
-<br>
-
+    	<br>
 
 <!--同じ条件で他の店舗を表示させる-->
 <!--
