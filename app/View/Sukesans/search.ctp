@@ -124,20 +124,46 @@
 	<?php } else {//検索条件に該当する店舗が3店未満のとき。
 			for($i = 0; $i < count($result); $i++) { ?>
 
+
+		<p>その<?= $i+1;?></p>
+			<table class="table table-striped"  align="center">
+				
 				<tr>
-    				<td><?= h($result[$i]['Shop']['name']);?></td>
-    				<td><?= h($result[$i]['Shop']['genre']);?></td>
-    				<td><?= h($result[$i]['Shop']['purpose']);?></td>
-    				<td><?= h($result[$i]['Shop']['recommendation']);?></td>
-   		 			<td><?= h($result[$i]['Shop']['budget_min']);?>〜<?= h($result[$i]['Shop']['budget_max']);?>円</td>
-    				<td><a href="<?= h($result[$i]['Shop']['url'])?>" target="_blank">
-    					<?= h($result[$i]['Shop']['url']);?></a></td>
- 	    			<td><?= h($result[$i]['Shop']['location']);?>駅</td>
-    	 			<td><?= h($result[$i]['Shop']['property']);?></td>
+					<th>お店</th>
+					    <td display><?= h($result[$i]['Shop']['name']);?></td>
+				</tr>
+				<tr>
+					<th>料理ジャンル</th>
+						<td><?= h($result[$i]['Shop']['genre']);?></td>
+				</tr>
+				<tr>
+					<th>オススメ用途</th>
+					    <td><?= h($result[$i]['Shop']['purpose']);?></td>
+				</tr>
+				<tr>
+					<th>イチオシ料理・酒</th>
+						  <td><?= h($result[$i]['Shop']['recommendation']);?></td>
+				</tr>
+				<tr>
+					<th>予算</th>
+    					<td><?= h($result[$i]['Shop']['budget_min']);?>〜<?= h($result[$i]['Shop']['budget_max']);?>円</td>
     			</tr>
-    		<?php } ?>
-		</table>
-	<br>
+    			<tr>
+					<th>URL</th>
+						<td width="20"><a href="<?= h($result[$i]['Shop']['url'])?>" target="_blank">
+    					<?= h($result[$i]['Shop']['url']);?></a></td>
+    			</tr>
+    			<tr>
+					<th>場所</th>
+						<td><?= h($result[$i]['Shop']['location']);?>駅</td>
+				</tr>
+				<tr>
+					<th>特徴</th>
+					     <td><?= h($result[$i]['Shop']['property']);?></td>
+    			</tr>
+			</table>
+    	<?php } ?>
+    	<br>
 
 <!--条件をゆるくしてもう一度検索させる-->
 
