@@ -27,28 +27,15 @@
 
 	<p>
 		「助三」は、飲み会会場をスピーディーに探すことができるサービスです。<br>
-		<!--飲み会の条件を選択、入力して頂ければ、条件に合ったお店候補を3つご提案致します。<br>
-		意外に時間がかかってしまうお店選びのサポートにぜひご利用ください。<br>-->
 	</p><br>
 
 	<form action="cgi-bin/abc.cgi" method="post">
-	<!--	
-		<p>
-			<label>メールアドレス：</label>
-			<div class="input-prepend">
-				<span class="add-on">
-					<i class="icon-envelope"></i>
-				</span>
-				<input type="email" name="data[Condition][mail]" size="30" maxlength="40" required>
-			</div>
-		</p>
-	-->
 
-	<p><label>最寄り駅：<br>
-		<select type="text" name="data[Condition][location]"  required></label>
+	<p><label>エリア：<br>
+		<select type="text" name="data[Condition][area]"  required></label>
 				<!--<option value="青山一丁目">青山一丁目</option>-->
 				<option value="赤坂">赤坂</option>
-				<option value="赤坂見附">	赤坂見附</option>
+				<!--<option value="赤坂見附">	赤坂見附</option>-->
 				<!--<option value="赤羽橋">赤羽橋</option>
 				<option value="浅草">浅草</option>
 				<option value="麻布十番">麻布十番</option>
@@ -72,7 +59,7 @@
 				<option value="木場">木場</option>
 				<option value="京橋">京橋</option>-->
 				<option value="銀座">銀座</option>
-				<option value="銀座一丁目">銀座一丁目</option>
+				<!--<option value="銀座一丁目">銀座一丁目</option>-->
 				<!--<option value="錦糸町">錦糸町</option>
 				<option value="京成立石">京成立石</option>
 				<option value="小岩">小岩</option>
@@ -84,14 +71,14 @@
 				<option value="品川">品川</option>
 				<option value="篠崎">篠崎</option>-->
 				<option value="渋谷" selected="selected">渋谷</option>
-				<!--<option value="下北沢">下北沢</option>
-				<option value="白金台">白銀台</option>-->
+				<!--<option value="下北沢">下北沢</option>-->
+				<!--<option value="白金台">白銀台</option>-->
 				<option value="新宿">新宿</option>
-				<option value="新宿三丁目">新宿三丁目</option>
-				<option value="新宿御苑前">新宿御苑前</option>
-				<option value="新宿西口">新宿西口</option>
-				<!--<option value="神泉">神泉</option>
-				<option value="新代田">新代田</option>-->
+				<!--<option value="新宿三丁目">新宿三丁目</option>-->
+				<!--<option value="新宿御苑前">新宿御苑前</option>-->
+				<!--<option value="新宿西口">新宿西口</option>
+				<!--<option value="神泉">神泉</option>-->
+				<!--<option value="新代田">新代田</option>-->
 				<option value="新橋">新橋</option>
 				<!--<option value="成城学園前">成城学園前</option>
 				<option value="西武新宿">西武新宿</option>
@@ -134,9 +121,8 @@
 				<option value="四谷三丁目">四谷三丁目</option>
 				<option value="代々木">代々木</option>-->
 				<option value="六本木">六本木</option>
-				<option value="六本木一丁目">六本木一丁目</option>
+				<!--<option value="六本木一丁目">六本木一丁目</option>-->
 		</select>
-		駅
 	</p>
 
 	<p>
@@ -180,7 +166,7 @@
 				<!--<option value="" >歓送迎会</option>-->
 				<!--<option value="二次会" >二次会</option>-->
 				<!--<option value="デート" >デート</option>-->
-				<!--<option value="締め" >締めのラーメン</option>-->
+				<option value="ラーメン" >締めのラーメン</option>
 				<option value="日本酒" >上司がうなる日本酒のお店</option>
 			</select>
 	</p>

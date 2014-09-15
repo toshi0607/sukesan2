@@ -26,15 +26,15 @@ class SukesansController extends AppController{
 
         $min = $condition['Condition']['budget_min'];
         $max = $condition['Condition']['budget_max'];
-        $location = $condition['Condition']['location'];
+        $area = $condition['Condition']['area'];
         $search = $condition['Condition']['search'];
         
         $params = $this->Shop->find('all', array(
             //検索条件から店舗情報DBを検索
             'conditions' => array(
                 
-                //最寄り駅検索   
-                'Shop.location LIKE' => '%'.$location.'%',
+                //エリア検索   
+                'Shop.area LIKE' => '%'.$area.'%',
                 //予算検索
                 'Shop.budget_min >=' => $min,
                 'Shop.budget_max <=' => $max,

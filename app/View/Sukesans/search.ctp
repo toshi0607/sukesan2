@@ -16,6 +16,7 @@
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 
+<!--<?php echo print_r($result); ?>-->
 
 <?php
 	if(count($result) > 0){ //該当する店舗があるとき?>
@@ -36,8 +37,10 @@
 					<th>特徴</th>
     			</tr>
 
-<!--<?php echo print_r($test); ?>-->
-<!--<?php echo $test; ?>-->
+
+<!--<?php echo $shop; ?>-->
+
+
 
 
 	<?php 
@@ -50,10 +53,9 @@
     				<td><?= h($result[$i]['Shop']['purpose']);?></td>
     				<td><?= h($result[$i]['Shop']['recommendation']);?></td>
     				<td><?= h($result[$i]['Shop']['budget_min']);?>〜<?= h($result[$i]['Shop']['budget_max']);?>円</td>
-    				<!--<td><?= h($result[$i]['Shop']['review']);?></td>-->
     				<td><a href="<?= h($result[$i]['Shop']['url'])?>" target="_blank">
     					<?= h($result[$i]['Shop']['url']);?></a></td>
-     				<td><?= h($result[$i]['Shop']['location']);?></td>
+     				<td><?= h($result[$i]['Shop']['location']);?>駅</td>
      				<td><?= h($result[$i]['Shop']['property']);?></td>
     			</tr>
     	<?php } ?>
@@ -92,7 +94,7 @@
 
 お店情報：<?= h($result[$i]['Shop']['url']);?>
 
-場所：<?= h($result[$i]['Shop']['location']);?>
+場所：<?= h($result[$i]['Shop']['location']);?>駅
 
 特徴：<?= h($result[$i]['Shop']['property']);?>
 
@@ -115,10 +117,9 @@
     				<td><?= h($result[$i]['Shop']['purpose']);?></td>
     				<td><?= h($result[$i]['Shop']['recommendation']);?></td>
    		 			<td><?= h($result[$i]['Shop']['budget_min']);?>〜<?= h($result[$i]['Shop']['budget_max']);?>円</td>
-    				<!--<td><?= h($result[$i]['Shop']['review']);?></td>-->
     				<td><a href="<?= h($result[$i]['Shop']['url'])?>" target="_blank">
     					<?= h($result[$i]['Shop']['url']);?></a></td>
- 	    			<td><?= h($result[$i]['Shop']['location']);?></td>
+ 	    			<td><?= h($result[$i]['Shop']['location']);?>駅</td>
     	 			<td><?= h($result[$i]['Shop']['property']);?></td>
     			</tr>
     		<?php } ?>
@@ -147,7 +148,7 @@
 
 	お店情報：<?= h($result[$i]['Shop']['url']);?>
 
-	場所：<?= h($result[$i]['Shop']['location']);?>
+	場所：<?= h($result[$i]['Shop']['location']);?>駅
 
 	特徴：<?= h($result[$i]['Shop']['property']);?>
 
