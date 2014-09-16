@@ -36,8 +36,12 @@
 		if(count($result) > 3){//検索条件に該当する店舗が3店以上のとき。
 			for($i = 0; $i < 3; $i++) { ?>
 
-		<p>その<?= $i+1;?></p>
-			<table class="table table-striped"  align="center">
+		<p><b>
+			<font size="+1">
+				その<?= $i+1;?>
+			</font>
+		</b></p>
+			<table class="table table-striped" align="center">
 				
 				<tr>
 					<th>お店</th>
@@ -77,20 +81,26 @@
     	<br>
 
 <!--同じ条件で他の店舗を表示させる-->
-<!--
-<form method="post" 
-	action="<?= $this->Html->url("./search"); ?>">
-	<input name="check" type="submit" class="btn" value="同じ条件の別店舗を探す" /></form>
--->
 
+	<form method="post" 
+		action="<?= $this->Html->url("./research"); ?>">
+		<input name="check" type="submit" class="btn btn-primary" value="同じ条件の別店舗を表示する" target="_blank" >
+	</form>
 
-	<input type="button" onclick="window.open('https://questant.jp/q/NP31YSA3')" target="_blank" value="助三を育てるアンケートに回答する" class="btn btn-danger"><br>
-	※表示されにくい場合は再読み込みをお願いいたします。<br><br>
-	
+<!--別の条件で検索させる-->
 	<form method="post" 
 		action="<?= $this->Html->url("./register"); ?>">
-		<input name="check" type="submit" class="btn btn-primary" value="別の条件で検索する" target="_blank"></form>
+		<input name="check" type="submit" class="btn btn-primary" value="別の条件で検索する">
+	</form><br>
+
+<!--アンケートに回答させる-->
+	<form>
+	<input type="button" onclick="window.open('https://questant.jp/q/NP31YSA3')" target="_blank" value="助三を育てるアンケートに回答する" class="btn btn-danger">	
 	</form>
+	※表示されにくい場合は再読み込みをお願いいたします。<br><br>
+
+
+
 
 	<br><br>
 
