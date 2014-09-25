@@ -13,6 +13,8 @@ class SukesansController extends AppController{
     function register(){
     }
 
+
+
     function news(){
     }
 
