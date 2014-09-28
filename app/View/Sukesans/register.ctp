@@ -26,7 +26,10 @@
 	</h1>
 
 	<p>
-		「助三」は、飲み会会場をスピーディーに探すことができるサービスです。<br>
+		「助三」は、飲み会・接待のお店探しに時間がかかってしまう人をサポートします！<br>
+		「絞り込み」機能を使えば、用途に合ったお店を即座に、３店舗提案してくれます♫<br>
+		お店選びも大事な仕事と言われる、グルメ商社マンたちが実際に利用しているお店をぜひ体験して下さい！<br>
+
 	</p><br>
 
 	<form action="cgi-bin/abc.cgi" method="post">
@@ -160,18 +163,21 @@
 	<p>
 		<label>絞り込み：</label>
 			<select type="text" name="data[Condition][search]">
-				<option value="1" >失敗しない助三オススメ！</option>
-				<option value="接待" >商社マンオススメ接待</option>
-				<option value="社内" >気軽な社内飲み会</option>
+				<option value="1" >助三オススメ!歓送迎会・接待向け</option>
+				<!--<option value="接待" >商社マンオススメ接待</option>-->
+				<option value="日本酒" >上司がうなる日本酒のお店</option>
+				<option value="社内" >気軽な社内飲み会向け</option>
 				<!--<option value="" >歓送迎会</option>-->
 				<!--<option value="二次会" >二次会</option>-->
 				<!--<option value="デート" >デート</option>-->
-				<option value="ラーメン" >締めのラーメン</option>
-				<option value="日本酒" >上司がうなる日本酒のお店</option>
+				<!--<option value="ラーメン" >締めのラーメン</option>-->
 			</select>
 	</p>
 	
-
+	<p>
+		※絞り込みの「助三オススメ!歓送迎会・接待向け」は、<br>
+		リーズナブルな料理コース(飲み放題付)＋個室(半個室含む)のお店が出ます。
+	</p>
 
 
 	<br><p><button class="btn btn-primary" type="submit" value="submit">検索</button></p>
